@@ -208,7 +208,7 @@ body > div > article > div > section:last-child {
 }
 
 .content-text ul li:first-child {
-  width:35%;
+  width:32%;
   
   color: #424242;
   
@@ -295,6 +295,11 @@ div.content-text.skills-listing > p {
 
 div.content-text.skills-listing > p > {
   color:#212121;
+}
+
+
+code {
+  font-size: 1.4em;
 }
 
 @media screen and (max-width: 600px) {
