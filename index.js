@@ -7,6 +7,15 @@ function render(resume) {
     var template = fs.readFileSync(__dirname + "/resume.template", "utf-8");
     // Load print-specific css
     var print = fs.readFileSync(__dirname + "/css/print.css", "utf-8");
+    
+    // Compile partial template
+    var contactProfileSeparatedSource = fs.readFileSync(__dirname + "/partials/contact-profile-separated.template", "utf-8");
+    var contactProfileSeparatedTemplate = Handlebars.compile(contactProfileSeparatedSource);
+    Handlebars.registerPartial('contact-profile-separated', contactProfileSeparatedTemplate);
+
+    var contactProfileMergedSource = fs.readFileSync(__dirname + "/partials/contact-profile-merged.template", "utf-8");
+    var contactProfileMergedTemplate = Handlebars.compile(contactProfileMergedSource);
+    Handlebars.registerPartial('contact-profile-merged', contactProfileMergedTemplate);
 
     // Register custom handlebars extensions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // foreach loops //

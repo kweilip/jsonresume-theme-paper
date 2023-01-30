@@ -1,0 +1,35 @@
+<!-- CONTACT -->
+<section class="content">
+  <div class="row">
+    <div class="content-cat">
+      Contact
+    </div>
+    <div class="content-text">
+      {{#if email}}
+      <ul>
+        <li>Email</li>
+        <li><a href="mailto:{{email}}">{{email}}</a></li>
+      </ul>
+      {{/if}}
+      {{#if phone}}
+      <ul>
+        <li>Phone</li>
+        <li>{{phone}}</li>
+      </ul>
+      {{/if}}
+
+      {{#each profiles}}
+      {{#if network}}
+      <ul>
+        <li>{{network}}</li>
+        <li>
+          <a href="{{url}}" target="_blank">
+            {{url}}
+          </a>
+        </li>
+      </ul>
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</section>
