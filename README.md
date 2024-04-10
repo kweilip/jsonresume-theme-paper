@@ -6,7 +6,12 @@ It inherited `media="print"` stylesheet for browser's **Print to PDF** to conver
 - Relocate section `Profile` to be after `Contact` 
 - Support `.summary[]` and `.highlights[]` in section `Education`
 
-Put your `resume.json` in this folder, and run `resume serve --theme .`.
+Put your `resume.json` in this folder, and run either
+```powershell
+resume serve --theme .
+resume serve --theme . --resume .\cv-LAIGames.json
+```
+
 You should now see this message:
 ```
 Preview: http://localhost:4000
